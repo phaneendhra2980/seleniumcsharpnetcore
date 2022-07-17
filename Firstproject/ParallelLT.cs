@@ -33,8 +33,8 @@ namespace ParallelLTSelenium
 
             DesiredCapabilities capabilities = new DesiredCapabilities();
 
-            capabilities.SetCapability("user", "phaneendhra");
-            capabilities.SetCapability("accessKey", "3l4yDbGGvzzGON9SHnJTzExgaakER55bAmpR9JT4bRbcsppNpK");
+            capabilities.SetCapability("user", ${{ secrets.LT_USER_NAME }});
+            capabilities.SetCapability("accessKey", ${{ secrets.LT_ACCESS_KEY }});
             capabilities.SetCapability("browserName", browser);
             capabilities.SetCapability("version", version);
             capabilities.SetCapability("platform", os);
